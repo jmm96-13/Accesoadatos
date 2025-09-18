@@ -1,6 +1,6 @@
 
-// document: representa página web (el DOM).
-// getElementById: busca el elemento que tenga el atributo id="btn" y lo devuelve para poder usarlo.
+//document: representa página web
+//getElementById: busca el elemento que tenga el atributo id="btn" y lo devuelve para poder usarlo.
 document.getElementById('btn').onclick = () => {
 
   // const: crea una variable cuyo valor no se reasigna.
