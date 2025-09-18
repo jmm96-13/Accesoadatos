@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entrada datos teclado</title>
+  <script>
+    var nombre;
+    var edad;
+    var población;
+    var centro;
+
+   //var NO puede comenzar por un numero
+   //No coincidir con palabras reservadas 
+
+    // leemos los datos utilizando la orden prompt
+    nombre = prompt("Teclea el nombre:");
+    edad = prompt("Teclea la edad:");
+    población = prompt("Población:");
+    centro = prompt("Centro de estudio:");
+
+    alert("Me llamo: " + nombre + " tengo: " + edad +
+          ", vivo en: " + población + " y estudio en: " + centro);
+
+    document.write(
+      "El nombre tecleado es: " + nombre +
+      " y su edad es: " + edad +
+      " la población es: " + población +
+      " y el centro es: " + centro
+    );
+  </script>
+</head>
+<body>
+  <table border="1px">
+    <tr>
+      <th>Nombre</th>
+      <th>Edad</th>
+      <th>Población</th>
+      <th>Centro de estudios</th>
+
+    </tr>
+  </table>
+</body>
+</html>
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Operaciones con parseInt</title>
+</head>
+<body>
+<script>
+
+  /* vamos a leer 2 numeros de teclado y calcular la suma, la resta del primero menos el segundo, la multiplicación,
+la division del primero por el segundo y el resto de dividir el primero por el segundo. 
+Visualizar el teclado en una alerta y en el documento.*/
+
+  // 2 números enteros
+  var num1 = parseInt(prompt("Introduce el primer número (entero):"), 10);
+  var num2 = parseInt(prompt("Introduce el segundo número (entero):"), 10);
+
+  // Mostrar en alerta los números ingresados
+  alert("Has introducido:\nPrimer número: " + num1 + "\nSegundo número: " + num2);
+
+  // Calcular operaciones
+  var suma  = num1 + num2;
+  var resta = num1 - num2;
+  var mult  = num1 * num2;
+  var div   = (num2 !== 0) ? (num1 / num2) : "No se puede dividir entre 0";
+  var resto = (num2 !== 0) ? (num1 % num2) : "No se puede calcular el resto con 0";
+
+  // ver en pantalla
+  document.write("<h2>Resultados</h2>");
+  document.write("Primer número: " + num1 + "<br>");
+  document.write("Segundo número: " + num2 + "<br><br>");
+  document.write("Suma: " + suma + "<br>");
+  document.write("Resta: " + resta + "<br>");
+  document.write("Multiplicación: " + mult + "<br>");
+  document.write("División: " + div + "<br>");
+  document.write("Resto: " + resto + "<br>");
+</script>
+</body>
+</html>
