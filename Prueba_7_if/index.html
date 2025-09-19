@@ -1,0 +1,27 @@
+  <!DOCTYPE html>
+  <html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>Evaluación de nota</title>
+  </head>
+  <body>
+    <h2>Introduce tu nota:</h2>
+    <input type="number" id="nota" placeholder="Escribe tu nota">
+    <button onclick="evaluarNota()">Evaluar</button>
+  
+    <script>
+      function evaluarNota() {
+        let nota = parseFloat(document.getElementById("nota").value);
+        if (nota >= 5) {
+          alert("APROBADO");
+        }
+        // Si la nota es menor que 5, no hace nada
+
+/* El siguiente ejempo lee una nota introducida por teclado y si la nota es igual o mayor que 5, 
+  visualizará  una alerta con el texto APROBADO en caso contrario no hará nada */
+
+      }
+    </script>
+  </body>
+  </html>
+  

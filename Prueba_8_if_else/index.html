@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anidamiento con if else</title>
+</head>
+<body>
+  <h1>Clasificación de Notas</h1>
+  <p>Haz clic en el botón e ingresa una nota para ver la evaluación.</p>
+
+  <button onclick="clasificarNota()">Ingresar Nota</button>
+
+  <script>
+    function clasificarNota() {
+      let nota = parseFloat(prompt("Introduce tu nota (0 a 10):"));
+
+      if (isNaN(nota)) {
+        alert("Por favor ingresa un número válido.");
+        return;
+      }
+
+      // Estructura if...else anidada
+      if (nota >= 9) {
+        alert("Excelente");
+      } else if (nota >= 7) {
+        alert("Notable");
+      } else if (nota >= 5) {
+        alert("Aprobado");
+      } else {
+        alert("Reprobado");
+      }
+    }
+  </script>
+</body>
+</html>
