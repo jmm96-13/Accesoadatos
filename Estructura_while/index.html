@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Acumulador - Contador</title>
+  <script type="text/javascript">
+    // Declaramos las variables:
+    // Num → almacenará el número introducido
+    // Suma → irá acumulando la suma de los números
+    // Cuenta → contará cuántos números se han introducido
+    var Num, Suma = 0, Cuenta = 0;
+
+    // Pedimos el primer número al usuario.
+    // Si el usuario introduce "0", el bucle no se ejecutará.
+    Num = parseInt(prompt("Introduce un número (cero para finalizar): ", 0));
+
+    // Mientras el número sea distinto de 0, seguimos pidiendo más números
+    while (Num != 0) {
+      // Sumamos el número a la variable acumuladora
+      Suma = Suma + Num;
+
+      // Incrementamos el contador (hemos introducido un número más)
+      Cuenta = Cuenta + 1;
+
+      // Volvemos a pedir otro número
+      Num = parseInt(prompt("Introduce un número (cero para finalizar): ", 0));
+    }
+
+    // Cuando el bucle termina (porque se escribió un 0):
+    // Mostramos la suma total de los números introducidos
+    document.write("<h3>La suma de los números es: " + Suma + "</h3>");
+
+    // Mostramos cuántos números se introdujeron en total
+    document.write("<h3>El número de números leídos es: " + Cuenta + "</h3>");
+  </script>
+</head>
+<body>
+</body>
+</html>

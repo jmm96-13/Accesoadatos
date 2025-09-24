@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 3.1</title>
+</head>
+<body>
+  <h2>Ejercicio 3.1</h2>
+  <script>
+    let cantidad = parseInt(prompt("Introduce una cantidad:"));
+
+    if (cantidad === 100) {
+      document.write("Cantidad: " + cantidad + "<br>");
+      document.write("Cantidad + 200 = " + (cantidad + 200));
+    } else if (cantidad >= 101 && cantidad <= 200) {
+      document.write("Cantidad: " + cantidad + "<br>");
+      document.write("Cantidad x 2 = " + (cantidad * 2));
+    } else if (cantidad < 0) {
+      document.write("Cantidad: " + cantidad + " (ES NEGATIVA)");
+    } else {
+      document.write("Cantidad: " + cantidad + "<br>");
+      document.write("Cantidad x 3 = " + (cantidad * 3));
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 3.3</title>
+</head>
+<body>
+  <h2>Ejercicio 3.3</h2>
+  <script>
+    // Pedimos al usuario que introduzca su sexo (H/M o h/m)
+    let sexo = prompt("Introduce tu sexo (H/M):");
+
+    // Usamos if...else para comprobar lo introducido
+    if (sexo === "H" || sexo === "h") {
+      // Si escribe H o h, mostramos Hombre
+      alert("Hombre");
+    } else if (sexo === "M" || sexo === "m") {
+      // Si escribe M o m, mostramos Mujer
+      alert("Mujer");
+    } else {
+      // Si escribe otra cosa distinta, mostramos error
+      alert("Error: Debes introducir H, h, M o m.");
+    }
+  </script>
+</body>
+</html>
