@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio While 2</title>
+</head>
+<body>
+  <h2>Ejercicio While 2 - Leer números</h2>
+  <script>
+    let num = parseInt(prompt("Introduce un número (0 para terminar):", 0));
+
+    while (num !== 0) {
+      document.write("<p>Número introducido: " + num + "</p>");
+      num = parseInt(prompt("Introduce un número (0 para terminar):", 0));
+    }
+
+    document.write("<h3>Fin del programa</h3>");
+  </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio Do While</title>
+</head>
+<body>
+  <h2>Ejercicio Do...While - Validar sexo</h2>
+  <script>
+    let sexo;
+
+    do {
+      sexo = prompt("Introduce tu sexo (H/h para Hombre, M/m para Mujer):");
+    } while (sexo !== "H" && sexo !== "h" && sexo !== "M" && sexo !== "m");
+
+    if (sexo === "H" || sexo === "h") {
+      document.write("<h3>Hombre</h3>");
+    } else {
+      document.write("<h3>Mujer</h3>");
+    }
+  </script>
+</body>
+</html>
