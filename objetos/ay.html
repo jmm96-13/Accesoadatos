@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Objeto Interactivo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    button {
+      margin: 5px;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+    #salida {
+      margin-top: 15px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      min-height: 50px;
+      background: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+  <h2>Ejemplo de objeto en JavaScript</h2>
+
+  <button onclick="user.guardar()">Guardar usuario</button>
+  <button onclick="borrarProps()">Borrar propiedades</button>
+  <button onclick="mostrarObjeto()">Mostrar objeto</button>
+
+  <div id="salida"></div>
+
+  <script>
+    // Objeto user
+    const user = {
+      name: "Ana",
+      username: "ana123"
+    };
+
+    // Método guardar
+    user.guardar = function() {
+      document.getElementById("salida").innerHTML += "✅ Guardado: " + this.name + "<br>";
+    };
+
+    // Función para borrar propiedades
+    function borrarProps() {
+      delete user.name;
+      delete user.guardar;
+      document.getElementById("salida").innerHTML += "🗑️ Propiedades borradas<br>";
+    }
+
+    // Función para mostrar el objeto
+    function mostrarObjeto() {
+      document.getElementById("salida").innerHTML += "📦 Objeto final: " + JSON.stringify(user) + "<br>";
+    }
+  </script>
+</body>
+</html>

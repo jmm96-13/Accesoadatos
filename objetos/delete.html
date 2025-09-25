@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Objeto con const y delete</title>
+</head>
+<body>
+  <div id="salida"></div>
+
+  <script>
+    const user = {
+      name: "Ana",
+      username: "ana123"
+    };
+
+    user.guardar = function() {
+      document.getElementById("salida").innerHTML += "Guardado: " + this.name + "<br>";
+    };
+
+    user.guardar();
+
+    delete user.name;
+    delete user.guardar;
+
+    document.getElementById("salida").innerHTML += "Objeto final: " + JSON.stringify(user);
+  </script>
+</body>
+</html>
