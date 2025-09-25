@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mes con switch</title>
+</head>
+<body>
+  <h2>Introduce un número del 1 al 12</h2>
+  <button onclick="pedirMes()">Comprobar mes</button>
+
+  <p id="resultado"></p>
+
+  <script>
+    function pedirMes() {
+      // Pedir número al usuario
+      let numero = parseInt(prompt("Escribe un número entre 1 y 12:"));
+      let mes;
+
+      // Evaluar con switch
+      switch (numero) {
+        case 1: mes = "Enero"; break;
+        case 2: mes = "Febrero"; break;
+        case 3: mes = "Marzo"; break;
+        case 4: mes = "Abril"; break;
+        case 5: mes = "Mayo"; break;
+        case 6: mes = "Junio"; break;
+        case 7: mes = "Julio"; break;
+        case 8: mes = "Agosto"; break;
+        case 9: mes = "Septiembre"; break;
+        case 10: mes = "Octubre"; break;
+        case 11: mes = "Noviembre"; break;
+        case 12: mes = "Diciembre"; break;
+        default: mes = "Número no válido. Debe ser entre 1 y 12.";
+      }
+
+      // Mostrar resultado en la página
+      document.getElementById("resultado").innerText = "El mes es: " + mes;
+    }
+  </script>
+</body>
+</html>
