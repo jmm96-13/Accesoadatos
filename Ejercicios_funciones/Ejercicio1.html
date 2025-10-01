@@ -8,6 +8,7 @@
   <h2>Ejercicio 1: Función numeroMayor()</h2>
   <p>Ingresa tres números para encontrar el mayor:</p>
   
+  <!-- Entrada de los números -->
   <label for="num1">Número 1:</label>
   <input type="number" id="num1"><br><br>
   
@@ -17,25 +18,37 @@
   <label for="num3">Número 3:</label>
   <input type="number" id="num3"><br><br>
   
+  <!-- Botón que llama a la función verificarMayor() al hacer clic -->
   <button onclick="verificarMayor()">Calcular mayor</button>
   
+  <!-- Aquí se mostrará el resultado -->
   <h3 id="resultado"></h3>
   
   <script>
+    // Función que recibe 3 números como parámetros y devuelve el mayor
     function numeroMayor(a, b, c) {
+      // Si los tres números son iguales, retorna el texto "son iguales"
       if (a === b && b === c) {
         return "son iguales";
       } else {
+        // Si no son iguales, usa Math.max() para devolver el mayor
         return Math.max(a, b, c);
       }
     }
 
+    // Función que obtiene los valores desde los inputs y muestra el resultado
     function verificarMayor() {
+      // Toma el valor del input con id="num1,2,3", y lo convierte a número
       const n1 = Number(document.getElementById("num1").value);
+      
       const n2 = Number(document.getElementById("num2").value);
+      
       const n3 = Number(document.getElementById("num3").value);
 
+      // Llama a numeroMayor con los 3 números capturados
       const resultado = numeroMayor(n1, n2, n3);
+
+      // Muestra el resultado dentro del elemento con id="resultado"
       document.getElementById("resultado").textContent = "Resultado: " + resultado;
     }
   </script>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 2 - esVocal()</title>
+</head>
+<body>
+  <h2>Ejercicio 2: Función esVocal()</h2>
+  <p>Ingresa un carácter para verificar si es vocal:</p>
+  
+  <!-- Input donde el usuario escribe un carácter -->
+  <label for="caracter">Carácter:</label>
+  <input type="text" id="caracter" maxlength="1"> <!-- maxlength=1 evita más de un carácter -->
+  <br><br>
+  
+  <!-- Botón que llama a la función verificarVocal() -->
+  <button onclick="verificarVocal()">Verificar</button>
+  
+  <!-- Aquí se mostrará el resultado -->
+  <h3 id="resultado"></h3>
+  
+  <script>
+    // Función que recibe un carácter y devuelve true si es vocal
+    function esVocal(caracter) {
+      // Convertimos el carácter a minúscula para no distinguir entre mayúsculas/minúsculas
+      caracter = caracter.toLowerCase();
+
+      // Lista de vocales
+      const vocales = ["a", "e", "i", "o", "u"];
+
+      // includes() devuelve true si el carácter está en el array
+      return vocales.includes(caracter);
+    }
+
+    // Función que obtiene el valor del input y muestra el resultado
+    function verificarVocal() {
+      // Captura lo que el usuario escribió en el input con id="caracter"
+      const char = document.getElementById("caracter").value;
+
+      // Llama a esVocal con el carácter ingresado
+      const resultado = esVocal(char);
+
+      // Muestra el resultado en el <h3>
+      document.getElementById("resultado").textContent = 
+        "¿Es vocal?: " + resultado;
+    }
+  </script>
+</body>
+</html>

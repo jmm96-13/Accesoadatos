@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 3 con for</title>
+</head>
+<body>
+  <h2>Ejercicio 3: Función generar_caracteres() con for</h2>
+  <p>Ingresa un número y un carácter para repetirlo:</p>
+  
+  <label for="num">Número:</label>
+  <input type="number" id="num" min="1"><br><br>
+  
+  <label for="char">Carácter:</label>
+  <input type="text" id="char" maxlength="1"><br><br>
+  
+  <button onclick="verificarGenerar()">Generar</button>
+  
+  <h3 id="resultado"></h3>
+  
+  <script>
+    // Función que repite un carácter n veces usando un for
+    function generar_caracteres(n, caracter) {
+      let resultado = ""; // acumulador vacío
+      for (let i = 0; i < n; i++) {
+        resultado += caracter; // en cada vuelta añadimos el carácter
+      }
+      return resultado;
+    }
+
+    function verificarGenerar() {
+      const n = Number(document.getElementById("num").value);
+      const char = document.getElementById("char").value;
+
+      const resultado = generar_caracteres(n, char);
+      document.getElementById("resultado").textContent = "Resultado: " + resultado;
+    }
+  </script>
+</body>
+</html>

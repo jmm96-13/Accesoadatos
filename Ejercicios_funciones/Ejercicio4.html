@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 4 con for</title>
+</head>
+<body>
+  <h2>Ejercicio 4: Función inversa() con for</h2>
+  <p>Ingresa una cadena de texto para invertirla:</p>
+  
+  <label for="texto">Texto:</label>
+  <input type="text" id="texto" size="30"><br><br>
+  
+  <button onclick="verificarInversa()">Invertir</button>
+  
+  <h3 id="resultado"></h3>
+  
+  <script>
+    // Función que invierte una cadena usando un bucle for
+    function inversa(cadena) {
+      cadena = cadena.toLowerCase();  // pasamos a minúsculas
+      let resultado = "";             // acumulador vacío
+      
+      // Recorremos la cadena de atrás hacia adelante
+      for (let i = cadena.length - 1; i >= 0; i--) {
+        resultado += cadena[i]; // vamos agregando cada carácter
+      }
+      
+      return resultado;
+    }
+
+    function verificarInversa() {
+      const texto = document.getElementById("texto").value;
+      const resultado = inversa(texto);
+      document.getElementById("resultado").textContent = "Resultado: " + resultado;
+    }
+  </script>
+</body>
+</html>
