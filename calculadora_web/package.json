@@ -1,0 +1,31 @@
+{
+  "name": "ccalculadora_web",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "npm run dev"
+  },
+  "keywords": [
+    "calculator",
+    "typescript",
+    "web"
+  ],
+  "author": "Josefa Macias",
+  "license": "MIT",
+  "description": "Calculadora web mejorada en TypeScript",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "rxjs": "^7.8.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "vite": "^7.1.7"
+  }
+}
+
+
