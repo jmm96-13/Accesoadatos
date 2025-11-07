@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora de gastos de viaje</title>
+</head>
+<body>
+  <h2>🧳 Calculadora de gastos de viaje</h2>
+  <p>Ingresa tus gastos para calcular el total:</p>
+  
+  <!-- Input para alojamiento -->
+  <label for="alojamiento">Alojamiento (€):</label>
+  <input type="number" id="alojamiento" min="0"><br><br>
+  
+  <!-- Input para alimentación -->
+  <label for="alimentacion">Alimentación (€):</label>
+  <input type="number" id="alimentacion" min="0"><br><br>
+  
+  <!-- Input para entretenimiento -->
+  <label for="entretenimiento">Entretenimiento (€):</label>
+  <input type="number" id="entretenimiento" min="0"><br><br>
+  
+  <!-- Botón para calcular el total -->
+  <button onclick="calcularTotal()">Calcular Total</button>
+  
+  <h3 id="resultado"></h3>
+  
+  <script>
+    // Función que suma los gastos y muestra el total
+    function calcularTotal() {
+      const alojamiento = Number(document.getElementById("alojamiento").value);
+      const alimentacion = Number(document.getElementById("alimentacion").value);
+      const entretenimiento = Number(document.getElementById("entretenimiento").value);
+      
+      // Calculamos el total
+      const total = alojamiento + alimentacion + entretenimiento;
+      
+      // Mostramos el resultado
+      document.getElementById("resultado").textContent = 
+        "💰 El gasto total del viaje es: " + total + " €";
+    }
+  </script>
+</body>
+</html>

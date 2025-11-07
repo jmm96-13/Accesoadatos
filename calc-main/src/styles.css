@@ -1,0 +1,129 @@
+/* 🎨 Estilos globales */
+body {
+  font-family: "Poppins", sans-serif; /* Cambié la tipografía a una más moderna */
+  margin: 0;
+  padding: 20px;
+
+  /* Colores suaves del fondo */
+  background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%);
+  
+  /* Centra la calculadora en la pantalla */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* 🧮 Contenedor principal de la calculadora */
+.calculator {
+  background-color: #2b2d42; /* Reemplacé el gris oscuro por un azul más elegante */
+  padding: 20px;
+  border-radius: 15px; /* Añadí bordes redondeados */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4); /* Sombra más difusa para darle profundidad */
+  width: 320px;
+}
+
+/* 🖥️ Pantalla de visualización */
+.display {
+  margin-bottom: 15px;
+}
+
+.display input {
+  width: 100%;
+  height: 60px;
+  font-size: 26px; /* Aumenté el tamaño de fuente */
+  text-align: right;
+  padding: 0 15px;
+  border: none;
+  border-radius: 10px; /* Bordes redondeados para suavizar el diseño */
+  background-color: #1a1a1d; /* Fondo más oscuro para contrastar mejor */
+  color: #00ffcc; /* Cambié el color del texto a verde menta */
+  box-sizing: border-box;
+}
+
+/* 🔢 Sección de botones */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+/* 🎛️ Estilo base para todos los botones */
+.btn {
+  height: 60px;
+  font-size: 20px;
+  border: none;
+  border-radius: 8px; /* Bordes redondeados */
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+/* Efecto hover: aclaro ligeramente el color */
+.btn:hover {
+  filter: brightness(1.1);
+}
+
+/* Efecto al presionar: pequeño hundimiento visual */
+.btn:active {
+  transform: scale(0.95);
+}
+
+/* 🔘 Botones numéricos */
+.btn.number {
+  background-color: #4b4b4b; /* Gris medio */
+  color: white;
+}
+
+/* ➕ Botones de operaciones */
+.btn.operator {
+  background-color: #00adb5; /* Cambié el naranja por azul turquesa */
+  color: white;
+  font-weight: bold;
+}
+
+/* 🧹 Botón de limpiar (C) */
+.btn.clear {
+  background-color: #a6a6a6;
+  color: black;
+}
+
+/* 🔄 Botón de limpiar todo (AC) - nuevo */
+.btn.clear-all {
+  background-color: #ef233c; /* Rojo fuerte */
+  color: white;
+  font-weight: bold;
+}
+
+/* 🟰 Botón de igual (=) */
+.btn.equals {
+  background-color: #00adb5;
+  color: white;
+  grid-row: span 2;
+  font-size: 24px; /* Más grande para destacar */
+}
+
+/* 0 ocupa dos columnas */
+.btn.zero {
+  grid-column: span 2;
+}
+
+/* 💡 Botones nuevos: porcentaje y raíz cuadrada */
+.btn[data-value="%"],
+.btn[data-value="√("] {
+  background-color: #3a86ff; /* Azul intenso */
+  color: white;
+  font-weight: bold;
+}
+
+/* 🌗 Tema oscuro opcional (para futuras mejoras) */
+body.dark {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
+
+body.dark .calculator {
+  background-color: #1a1a1d;
+}
+
+body.dark .btn.operator {
+  background-color: #f39c12;
+}

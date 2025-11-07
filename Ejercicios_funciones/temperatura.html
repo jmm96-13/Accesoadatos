@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Conversor de temperatura</title>
+</head>
+<body>
+  <h2>🌡 Conversor de temperatura</h2>
+  
+  <p>Selecciona el tipo de conversión:</p>
+  <select id="tipo">
+    <option value="1">Celsius ➡ Fahrenheit</option>
+    <option value="2">Fahrenheit ➡ Celsius</option>
+  </select>
+  <br><br>
+  
+  <label for="temp">Ingresa la temperatura:</label>
+  <input type="number" id="temp"><br><br>
+  
+  <button onclick="convertir()">Convertir</button>
+  
+  <h3 id="resultado"></h3>
+  
+  <script>
+    // Función para Celsius a Fahrenheit
+    function celsiusAFahrenheit(c) {
+      return (c * 9/5) + 32;
+    }
+
+    // Función para Fahrenheit a Celsius
+    function fahrenheitACelsius(f) {
+      return (f - 32) * 5/9;
+    }
+
+    // Función principal
+    function convertir() {
+      const tipo = document.getElementById("tipo").value; // 1 o 2
+      const temp = Number(document.getElementById("temp").value);
+      let resultado = "";
+      
+      if (tipo === "1") {
+        resultado = temp + " °C equivalen a " + celsiusAFahrenheit(temp).toFixed(2) + " °F";
+      } else {
+        resultado = temp + " °F equivalen a " + fahrenheitACelsius(temp).toFixed(2) + " °C";
+      }
+      
+      document.getElementById("resultado").textContent = resultado;
+    }
+  </script>
+</body>
+</html>

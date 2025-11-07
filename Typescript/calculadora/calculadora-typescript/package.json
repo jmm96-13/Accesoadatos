@@ -1,0 +1,20 @@
+{
+  "name": "calculadora-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "@types/readline-sync": "^1.4.4"
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}

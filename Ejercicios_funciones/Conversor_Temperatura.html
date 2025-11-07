@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Conversor de Temperatura</title>
+</head>
+<body>
+  <h1>Programa: Conversor de Temperatura_Josefa_Macias_Manceras</h1>
+
+  <script>
+    // Función para convertir de Celsius a Fahrenheit
+    function celsiusToFahrenheit(celsius) { // recibe grados Celsius y devuelve su equivalente en Fahrenheit
+      return (celsius * 9 / 5) + 32; // fórmula: (ºC x 9/5) + 32
+    }
+
+    // Función para convertir de Fahrenheit a Celsius
+    function fahrenheitToCelsius(fahrenheit) {
+      return (fahrenheit - 32) * 5 / 9; // fórmula: (ºF - 32) x 5/9
+    }
+
+    // Preguntamos qué tipo de conversión quiere el usuario
+    let option = prompt("¿Qué tipo de conversión?\n1: Celsius a Fahrenheit\n2: Fahrenheit a Celsius");
+
+    // Según la opción elegida:
+    if (option == "1") { //convertimos de Celsius a Fahrenheit
+      let celsius = parseFloat(prompt("Inserta la temperatura en grados Celsius:"));
+      let fahrenheit = celsiusToFahrenheit(celsius);
+      alert(celsius + " °C equivalen a " + fahrenheit + " °F");
+    } 
+    else if (option == "2") { //convertimos de Fahrenheit a Celsius
+      let fahrenheit = parseFloat(prompt("Inserta la temperatura en grados Fahrenheit:"));
+      let celsius = fahrenheitToCelsius(fahrenheit); // llamamos a la función para convertir
+      alert(fahrenheit + " °F equivalen a " + celsius + " °C"); //mostramos resultado
+    } 
+    else {
+      alert("Opción no válida"); //mensaje error
+    }
+  </script>
+</body>
+</html>

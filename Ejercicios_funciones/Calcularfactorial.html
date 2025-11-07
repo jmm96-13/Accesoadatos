@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Calcular Factorial</title>
+</head>
+<body>
+  <h1>Programa: Calcular Factorial_Josefa_Macias_Manceras</h1>
+
+  <script>
+    // Función calculateFactorial
+    function calculateFactorial(number) { //calcula el factorial de un número
+      let result = 1; // variable inicializada el resultado en 1, "ya que el factorial de 0 y 1 es 1"
+
+      // Bucle for que multiplica todos los números hasta "number"
+      for (let i = 1; i <= number; i++) {
+        result = result * i; //se multiplica por result en cada iteración
+      }
+
+      return result; // almacena el resultado en result y devuelve result
+    }
+
+    // Pedimos al usuario un número entero NO negativo
+    let userInput = prompt("Ingresa un número entero no negativo: ");
+
+    // Convertimos lo que el usuario escribió a número entero
+    let number = parseInt(userInput);
+
+    // Calculamos el factorial
+    let factorial = calculateFactorial(number);
+
+    // Mostramos el resultado en pantalla
+    alert("El factorial de " + number + " es: " + factorial);
+  </script>
+</body>
+</html>
