@@ -1,0 +1,20 @@
+<h2>🐾 Mis Mascotas</h2>
+<div class="add-section">
+  <input [(ngModel)]="newPet" placeholder="Nombre de la mascota" />
+  <button (click)="addPet()">Agregar</button>
+</div>
+<div class="filters">
+  <button (click)="filter='all'">Todas</button>
+  <button (click)="filter='fed'">Alimentadas</button>
+  <button (click)="filter='hungry'">No alimentadas</button>
+</div>
+<ul>
+  <li *ngFor="let pet of filteredPets; let i=index">
+    <label>
+      <input type="checkbox" [checked]="pet.fed" (change)="toggleFed(pet)">
+      <span [class.fed]="pet.fed">{{ pet.name }}</span>
+    </label>
+    <button class="delete" (click)="deletePet(i)">❌</button>
+  </li>
+</ul>
+<p class="counter">Mascotas alimentadas: <strong>{{ fedCount }}</strong></p>
