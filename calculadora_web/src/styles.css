@@ -1,0 +1,129 @@
+/* Estilos globales */
+body {
+  font-family: "Poppins", sans-serif; /* Tipografía moderna */
+  margin: 0;
+  padding: 20px;
+
+  /* Colores suaves del fondo */
+  background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%);
+  
+  /* Centra la calculadora en la pantalla */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Contenedor principal de la calculadora */
+.calculator {
+  background-color: #2b2d42; /* Azul oscuro elegante */
+  padding: 20px;
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4); /* Sombra para profundidad */
+  width: 320px;
+}
+
+/* Pantalla de visualización */
+.display {
+  margin-bottom: 15px;
+}
+
+.display input {
+  width: 100%;
+  height: 60px;
+  font-size: 26px; /* Tamaño de fuente aumentado */
+  text-align: right;
+  padding: 0 15px;
+  border: none;
+  border-radius: 10px; /* Bordes suaves */
+  background-color: #1a1a1d; /* Fondo oscuro */
+  color: #00ffcc; /* Texto en verde menta */
+  box-sizing: border-box;
+}
+
+/* Sección de botones */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+/* Estilo base para todos los botones */
+.btn {
+  height: 60px;
+  font-size: 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+/* Efecto hover */
+.btn:hover {
+  filter: brightness(1.1);
+}
+
+/* Efecto al presionar */
+.btn:active {
+  transform: scale(0.95);
+}
+
+/* Botones numéricos */
+.btn.number {
+  background-color: #4b4b4b;
+  color: white;
+}
+
+/* Botones de operaciones */
+.btn.operator {
+  background-color: #00adb5;
+  color: white;
+  font-weight: bold;
+}
+
+/* Botón de limpiar (C) */
+.btn.clear {
+  background-color: #a6a6a6;
+  color: black;
+}
+
+/* Botón de limpiar todo (AC) */
+.btn.clear-all {
+  background-color: #ef233c;
+  color: white;
+  font-weight: bold;
+}
+
+/* Botón de igual (=) */
+.btn.equals {
+  background-color: #00adb5;
+  color: white;
+  grid-row: span 2;
+  font-size: 24px;
+}
+
+/* El 0 ocupa dos columnas */
+.btn.zero {
+  grid-column: span 2;
+}
+
+/* Botones nuevos: porcentaje y raíz cuadrada */
+.btn[data-value="%"],
+.btn[data-value="√("] {
+  background-color: #3a86ff;
+  color: white;
+  font-weight: bold;
+}
+
+/* Tema oscuro opcional */
+body.dark {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
+
+body.dark .calculator {
+  background-color: #1a1a1d;
+}
+
+body.dark .btn.operator {
+  background-color: #f39c12;
+}
